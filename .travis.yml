@@ -1,7 +1,7 @@
-env:
-  - FOO=foo
-  - BAR=bar
-  - BAZ=baz
-  - BUZ=buz
+#env:
+#  - FOO=foo
+#  - BAR=bar
+#  - BAZ=baz
+#  - BUZ=buz
 
 script: true
