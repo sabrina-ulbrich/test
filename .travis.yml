@@ -10,4 +10,4 @@ env:
   - FOO=8
   - FOO=9
 
-script: sleep 15
+script: sleep 5
