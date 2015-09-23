@@ -11,3 +11,9 @@ env:
   - FOO=9
 
 script: sleep 5
+
+notifications:
+  email: 
+    recipients:
+    - me@svenfuchs.com
+    on_success: always
