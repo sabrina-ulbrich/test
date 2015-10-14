@@ -1,7 +1,1 @@
-script: sleep 5
-
-notifications:
-  email: 
-    recipients:
-    - me@svenfuchs.com
-    on_success: always
+script: true
