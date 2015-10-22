@@ -1,4 +1,7 @@
 script: true
 notifications:
+  email:
+    on_success: always
+    
   webhooks: http://requestb.in/18jio5c1
     
