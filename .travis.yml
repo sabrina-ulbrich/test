@@ -1,12 +1,12 @@
 rvm:
-  - 2.2.1
-  - 1.9.3
+  - 2.2
+  - 1.9
 
 matrix:
   allow_failure:
-    - rvm: 1.9.3
+    - rvm: 1.9
 
-script: "ruby -v | grep 2.2.1"
+script: "ruby -v | grep 2.2"
 
 # notifications:
 #   email:
