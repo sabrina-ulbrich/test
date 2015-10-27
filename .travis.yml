@@ -6,7 +6,7 @@ matrix:
   allow_failures:
     - rvm: 1.9
 
-script: "ruby -v | grep 2.2"
+script: "if ruby -v | grep 2.2; then sleep 15; else false; fi"
 
 # notifications:
 #   email:
