@@ -5,7 +5,7 @@ rvm:
 matrix:
   allow_failures:
     - rvm: 1.9
-  fast_finish: true
+  # fast_finish: true
 
 script: "if ruby -v | grep 2.2; then true; else sleep 30; false; fi"
 
