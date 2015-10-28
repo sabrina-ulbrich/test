@@ -2,12 +2,12 @@ rvm:
   - 2.2
   - 1.9
 
-matrix:
-  allow_failures:
-    - rvm: 1.9
-  # fast_finish: true
+# matrix:
+#   allow_failures:
+#     - rvm: 1.9
+#   # fast_finish: true
 
-script: "if ruby -v | grep 2.2; then true; else sleep 30; false; fi"
+script: "if ruby -v | grep 2.2; then false; else sleep 30; true; fi"
 
 # notifications:
 #   email:
