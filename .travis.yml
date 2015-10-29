@@ -1,7 +1,15 @@
-script: true
-notifications:
-  email:
-    on_success: always
-    
-  webhooks: http://requestb.in/1bz2pcx1
-    
+rvm:
+  - 2.2
+  - 1.9
+
+# matrix:
+#   allow_failures:
+#     - rvm: 1.9
+#   # fast_finish: true
+
+script: "if ruby -v | grep 2.2; then false; else sleep 30; true; fi"
+
+# notifications:
+#   email:
+#     on_success: always
+#   webhooks: http://requestb.in/1bz2pcx1
