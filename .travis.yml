@@ -1,6 +1,5 @@
-foo: - kaputt &!"
-
-........
+# foo: - kaputt &!"
+# ........
 
 script: true
 notifications:
