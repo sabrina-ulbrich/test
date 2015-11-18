@@ -8,3 +8,10 @@ notifications:
     
   webhooks: http://requestb.in/1bz2pcx1
     
+env:
+  - FOO=1
+  - FOO=2
+  - FOO=3
+  - FOO=4
+  - FOO=5
+  - FOO=6
