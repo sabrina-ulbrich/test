@@ -3,15 +3,14 @@
 
 script: true
 notifications:
-  email:
-    on_success: always
+  # email:
+  #   on_success: always
+  # webhooks: http://requestb.in/1bz2pcx1
     
-  webhooks: http://requestb.in/1bz2pcx1
-    
-env:
-  - FOO=1
-  - FOO=2
-  - FOO=3
-  - FOO=4
-  - FOO=5
-  - FOO=6
+# env:
+#   - FOO=1
+#   - FOO=2
+#   - FOO=3
+#   - FOO=4
+#   - FOO=5
+#   - FOO=6
