@@ -1,11 +1,4 @@
 # foo: - kaputt &!"
 # ..........................
 
-script: true
-notifications:
-  # email:
-  #   on_success: always
-  # webhooks: http://requestb.in/1bz2pcx1
-    
-env:
- - FOO=0
+script: env
