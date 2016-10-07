@@ -1,11 +1,5 @@
-# foo: - kaputt &!"
-# ..........................
-
 script: true
 notifications:
-  # email:
-  #   on_success: always
-  # webhooks: http://requestb.in/1bz2pcx1
-    
 env:
- - FOO=0
+  global:
+    secure: me3hxFKKySKhuQo2FX+i6caPM9zOO/mrFigQQYSlgMWCdEqrSlKBNxY3LNXQcH0lmDbD02rU+I/iFRHxHF7JbDknQ9G3ymjc4fMM2lGc7+ROHOz9Ok36W7jrs6ZmG09azSW8dGXqYuG943EC8O2JUcSCmjIX60CNj44zptIOyIqpG5kbFMUfZCNLDd/QlYRh5XnTnngT43x95jd2kSNB4sz0wmc9SYJ62TM/lD3dIWegTLl93SswNvj1KuMm3VOn3cRZ9Yzwxp86MVedMq3I8tmUc8KH1XNLQNdnpm3ncwCDyBZtZYzdNLAE1okpt5kZ97M8AlzSGfPO8329HoCZ3MRN/1aR1X0gCOFfKzglSHeALBQhSLo6j1zvTMJ6yTFp/rT4M8H+9N4AmTXVQKTSzh1Y/du1BBTy6vVa5WOtYgfzs4MvKxcBgf1IATQXIrQWjz6dKJBVtIQlfsRTfCZ1VhT85u7IRAvd9rZCjcmFvxT8cavjPow5ZdtZJbjofDSxFrohWacbQmjM4BwTvr66tSSuE1DL/0mcuATD0c/DS/i2P1CRxfa7dZzMoLYAqAaugD5dsOW2UcV7XP1ALXPWxNQGTnl+ylo5D7gXxNDGrRMRN/fMoY50qaa3jlNweS6ED5lqmBpzVwIwkIFD1NxidMXw646HXI+8bbQBNWmzAP4=
