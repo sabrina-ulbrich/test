@@ -1,2 +1,5 @@
-install: false
+before_install: /usr/bin/false
+install: /usr/bin/false
+after_install: /usr/bin/false
+before_script: /usr/bin/false
 script: true
