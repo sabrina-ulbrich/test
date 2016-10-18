@@ -1,3 +1,2 @@
-after_install: /usr/bin/false
 before_script: /usr/bin/false
 script: true
