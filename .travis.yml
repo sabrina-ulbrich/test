@@ -1,2 +1,2 @@
-before_script: false
+after_install: false
 script: true
