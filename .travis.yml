@@ -1,2 +1,1 @@
-before_script: /usr/bin/false
 script: true
