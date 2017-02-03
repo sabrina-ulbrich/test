@@ -1,1 +1,1 @@
-script: sleep 5
+script: "ls -al /usr/lib/jvm"
