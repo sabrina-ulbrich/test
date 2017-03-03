@@ -1,1 +1,4 @@
-script: "ls -al /usr/lib/jvm"
+sudo: false
+script: true
+notifications:
+  email: false
