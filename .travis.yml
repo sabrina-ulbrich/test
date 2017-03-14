@@ -1,4 +1,4 @@
 sudo: false
-script: true
+script: sleep 5
 notifications:
   email: false
