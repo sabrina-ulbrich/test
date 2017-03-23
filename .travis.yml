@@ -1,4 +1,4 @@
-sudo: false
+sudo: true
 script: true
 before_script: "echo BEFORE_SCRIPT"
 notifications:
