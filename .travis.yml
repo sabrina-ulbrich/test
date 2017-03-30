@@ -3,6 +3,3 @@ script: true
 before_script: "echo BEFORE_SCRIPT"
 notifications:
   email: false
-env:
-  global:
-    FOO: foo
