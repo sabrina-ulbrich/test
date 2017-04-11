@@ -3,3 +3,18 @@ script: true
 before_script: "echo BEFORE_SCRIPT"
 notifications:
   email: false
+
+jobs:
+  include:
+    - stage: one
+      script: /bin/true
+    - stage: one
+      script: /bin/true
+    - stage: two
+      script: /bin/true
+    - stage: two
+      script: /bin/false
+    - stage: three
+      script: /bin/true
+    - stage: three
+      script: /bin/true
