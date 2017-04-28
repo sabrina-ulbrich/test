@@ -3,6 +3,6 @@ dist: trusty
 
 script: false
 
-notifications:
-  email: false
+# notifications:
+#   email: false
 
