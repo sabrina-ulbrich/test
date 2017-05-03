@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# exec > >(ruby filter.rb) 2>&1
-exec > >(ruby pty.rb ruby filter.rb) 2>&1
+# exec > >(ruby f.rb) 2>&1
+exec > >(ruby pty.rb ruby f.rb) 2>&1
 
 tty
 
