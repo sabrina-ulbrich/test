@@ -1,6 +1,6 @@
-sudo: false
+sudo: true
 # dist: trusty
-dist: precise
+# dist: precise
 
 script: bash ./run.sh
 
