@@ -2,7 +2,8 @@ sudo: true
 dist: trusty
 # dist: precise
 
-script: bash ./run.sh
+script: 
+  - - ">&2 echo $hiddenvar1"
 
 notifications:
   email: false
