@@ -3,7 +3,7 @@ dist: trusty
 # dist: precise
 
 script: 
-  - - ">&2 echo $hiddenvar1"
+  - ">&2 echo $hiddenvar1"
 
 notifications:
   email: false
