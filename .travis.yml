@@ -13,4 +13,3 @@ jobs:
       deploy: 
         provider: script
         script: "echo yay!"
-        on: sf-stages-demo
