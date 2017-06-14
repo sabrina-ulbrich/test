@@ -4,12 +4,4 @@ dist: trusty
 notifications:
   email: false
 
-jobs:
-  include:
-    - script: echo 1
-    - script: echo 2
-    - stage: deploy
-      script: skip
-      deploy: 
-        provider: script
-        script: "echo yay!"
+script: echo $FOO
