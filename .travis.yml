@@ -1,5 +1,6 @@
-sudo: true
-dist: trusty
+# sudo: true
+# dist: trusty
+os: osx
 
 notifications:
   email: false
