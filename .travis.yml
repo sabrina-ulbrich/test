@@ -1,10 +1,8 @@
-# sudo: true
-# dist: trusty
-os: osx
+sudo: true
+dist: trusty
+# os: osx
 
 notifications:
   email: false
-  webhooks: 
-  - https://requestb.in/1dtr5zj1
 
-script: echo $FOO
+script: echo yo
