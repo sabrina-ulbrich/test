@@ -1,8 +1,20 @@
-sudo: true
-dist: trusty
-# os: osx
+sudo: false
 
-notifications:
-  email: false
+language: node_js
+node_js:
+  - "7.9.0"
 
-script: echo yo
+matrix:
+  include:
+    - stage: test
+      env:
+        TEST_TYPE: unit
+      script: echo "yarn test:report"
+    - env:
+        TEST_TYPE: integration
+      script: bin/false
+    - stage: deploy
+      script: echo deploy
+  allow_failures:
+    - env:
+        TEST_TYPE: integration
