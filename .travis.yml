@@ -3,3 +3,7 @@ dist: trusty
 
 script:
   - echo foo
+
+env:
+  - FOO=foo
+  - FOO=bar
