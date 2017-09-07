@@ -1,14 +1,5 @@
-language: ruby
-rvm:
-  - '2.2'
-  - '2.3'
-env:
-  - FOO=1
-  - FOO=2
-script: echo true
-matrix:
-  fast_finish: true
-jobs:
-  include:
-    - stage: w00t!
-      script: echo true
+sudo: false
+dist: trusty
+
+script:
+  - sudo ls /root/
