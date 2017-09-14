@@ -1,14 +1,18 @@
-env:
-  - FOO=one
-  - FOO=two
-script: echo test
+
+dist: trusty
+sudo: false
+language: python
+
 stages:
-  - compile
-  - test
-  - deploy
+  - name: Test
+  - name: Deploy
+    if: tag IS present
+
 jobs:
   include:
-    - stage: compile
-      script: echo compile
-    - stage: deploy
-      script: echo deploy
+  - python: 3.5
+  - python: 3.6
+  - stage: Deploy
+    script: echo deploy
+
+script: echo test
