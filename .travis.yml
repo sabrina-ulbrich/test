@@ -1,18 +1,5 @@
-
-dist: trusty
-sudo: false
-language: python
-
-stages:
-  - name: Test
-  - name: Deploy
-    if: tag IS present
-
-jobs:
-  include:
-  - python: 3.5
-  - python: 3.6
-  - stage: Deploy
-    script: echo deploy
-
-script: echo test
+script: echo script
+deploy:
+  script: ./missing
+after_deploy:
+  - echo "after deploy"
