@@ -1,5 +1,6 @@
 script: echo script
 deploy:
+  provider: script
   script: ./missing
 after_deploy:
   - echo "after deploy"
