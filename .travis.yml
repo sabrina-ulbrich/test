@@ -1,6 +1,1 @@
-script: echo script
-deploy:
-  provider: script
-  script: ./missing
-after_script:
-  - echo "after deploy"
+script: echo "fuck yeah, merged"
