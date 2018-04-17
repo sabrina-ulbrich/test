@@ -12,4 +12,4 @@ jobs:
     - stage: Yo!
       script: echo stages
       # on v0 this would produce a parse error, which currently returns `true`, and thus includes the stage
-      if: branch NOT IN (sf-stages-passing)
+      if: branch NOT IN (master)
