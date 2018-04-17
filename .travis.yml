@@ -4,12 +4,12 @@ notifications:
 env:
   - FOO=1
   - FOO=2
-# this opts into v1, and makes the parse error go away, so the condition evaluates to `false`, and does not 
-# include the stage
+# this opts into v1
 conditions: v1
 jobs:
   include:
     - stage: Yo!
       script: echo stages
-      # on v0 this would produce a parse error, which currently returns `true`, and thus includes the stage
-      if: branch NOT IN (master)
+      # this is a parse error on v1, too. but it does not produce a stage anymore
+      # as v0 did
+      if: branch NOT (master)
