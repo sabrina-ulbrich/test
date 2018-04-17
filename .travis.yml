@@ -4,9 +4,6 @@ notifications:
 env:
   - FOO=1
   - FOO=2
-# this opts into v1, and makes the parse error go away, so the condition evaluates to `false`, and does not 
-# include the stage
-conditions: v1
 jobs:
   include:
     - stage: Yo!
