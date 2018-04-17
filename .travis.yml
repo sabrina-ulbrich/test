@@ -1,3 +1,12 @@
-sudo: false
-install: true
-script: echo true
+script: true
+notifications:
+  email: false
+env:
+  - FOO=1
+  - FOO=2
+jobs:
+  include:
+    - stage: Yo!
+      script: echo stages
+      # on v0 this would produce a parse error, which currently returns `true`, and thus includes the stage
+      if: branch NOT IN (sf-stages-passing)
