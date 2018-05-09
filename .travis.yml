@@ -1,15 +1,3 @@
-script: true
-notifications:
-  email: false
-env:
-  - FOO=1
-  - FOO=2
-# this opts into v1
-conditions: v1
-jobs:
-  include:
-    - stage: Yo!
-      script: echo stages
-      # this is a parse error on v1, too. but it does not produce a stage anymore
-      # as v0 did
-      if: branch NOT (master)
+sudo: true
+
+script: sudo apt-get update
