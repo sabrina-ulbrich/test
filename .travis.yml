@@ -1,3 +1,6 @@
-sudo: true
+sudo: false
+
+apt:
+  update: true
 
 script: sudo apt-get update
