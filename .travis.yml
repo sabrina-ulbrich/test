@@ -4,7 +4,7 @@ jobs:
   include:
     - env: FOO=foo
     - env: FOO=bar
-      if: branch = auto
+      if: branch = master
     - env: >
         FOO=extra_newline
-      if: branch = auto
+      if: branch = master
