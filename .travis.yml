@@ -1,5 +1,11 @@
 language: generic
 install: skip
-script: sec=$(seq 1 20 | sort -R | head -n 1); echo $sec; sleep $sec
-resources:
-  gpu: true
+script: echo script
+
+before_deploy:
+  - mkdir -p foo/bar
+  - cd foo/bar
+  
+deploy:
+  provider: script
+  script: pwd
