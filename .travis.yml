@@ -1,5 +1,9 @@
 import: 
   source: svenfuchs/test/other.yml
   mode: deep_merge
-  
+
+env:
+  global: 
+    OTHER: true
+    
 script: echo "Hello from .travis.yml"
