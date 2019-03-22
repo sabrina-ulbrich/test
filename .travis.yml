@@ -4,6 +4,6 @@ import:
 
 env:
   global: 
-    OTHER: true
+    TRAVIS_YML: true
     
 script: echo "Hello from .travis.yml"
