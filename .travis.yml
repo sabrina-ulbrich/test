@@ -1,11 +1,5 @@
-language: generic
-install: skip
-script: echo script
-
-before_deploy:
-  - mkdir -p foo/bar
-  - cd foo/bar
+import: 
+  source: svenfuchs/test/other.yml
+  mode: deep_merge
   
-deploy:
-  provider: script
-  script: pwd
+script: echo "Hello from .travis.yml"
