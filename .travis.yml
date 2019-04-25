@@ -1,11 +1,12 @@
 language: ruby
 rvm:
 - 2.4
+- 2.5
 env: # important!
 matrix:
   include:
-  - rvm: 2.5
-    env: ONE=one
+  - rvm: 2.6
+    env: KEY=VAULE
   allow_failures:
   - rvm: 2.6
-    env: TWO=two
+    env: KEY=VAULE
