@@ -1,11 +1,4 @@
-language: ruby
-rvm:
-- 2.4
-- 2.5
 matrix:
-  include:
-  - rvm: 2.6
-    env: KEY=VAULE
-  allow_failures:
-  - rvm: 2.6
-    env: KEY=VAULE
+  env:
+    global:
+      - FOO=foo
