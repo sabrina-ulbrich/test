@@ -1,5 +1,3 @@
 script: true
-matrix:
-  env:
-    global:
-      - FOO=foo
+global_env:
+  - FOO=foo
