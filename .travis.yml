@@ -1,3 +1,2 @@
 script: true
-global_env:
-  - FOO=foo
+language: java scala node_js
