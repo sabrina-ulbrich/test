@@ -1,3 +1,4 @@
+script: true
 matrix:
   env:
     global:
