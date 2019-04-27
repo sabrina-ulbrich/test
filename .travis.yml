@@ -1,4 +1,6 @@
+script: true
 matrix:
-  env:
-    global:
-      - FOO=foo
+  include:
+    env:
+      global:
+        - FOO: foo
