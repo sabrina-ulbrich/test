@@ -1,2 +1,2 @@
 script: true
-language: java scala node_js
+version: = 0
