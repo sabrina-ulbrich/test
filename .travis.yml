@@ -1,2 +1,5 @@
 script: true
 version: = 0
+
+addons:
+  chrome: stable
