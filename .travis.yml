@@ -1,1 +1,2 @@
+import: ./other.yml
 script: echo yo
