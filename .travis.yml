@@ -1,2 +1,6 @@
-import: ./other.yml
-script: echo yo
+language: shell
+script: true
+deploy:
+- provider: script
+  edge: true
+  script: echo foo
