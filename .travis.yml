@@ -1,5 +1,6 @@
 language: shell
 script: true
-notifications:
-  - invalid: format
-unknown: key
+matrix:
+  fast_finish: true
+jobs:
+  - script: one
