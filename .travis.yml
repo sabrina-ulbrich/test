@@ -1,6 +1,9 @@
 language: shell
 script: true
-matrix:
-  fast_finish: true
+env:
+  jobs:
+  - FOO=foo
+  - BAR=bar
 jobs:
-  - script: one
+  - env: BAZ=baz
+    script: echo baz
