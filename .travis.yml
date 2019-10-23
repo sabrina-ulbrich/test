@@ -1,9 +1,3 @@
 language: shell
 script: true
-env:
-  matrix:
-  - FOO=foo
-  - BAR=bar
-matrix:
-  - env: BAZ=baz
-    script: echo baz
+unknown: key
