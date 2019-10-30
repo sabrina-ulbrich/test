@@ -1,0 +1,7 @@
+import: ./two.yml
+
+env:
+  global: 
+    - ONE=one
+
+script: echo "Hello from one.yml"

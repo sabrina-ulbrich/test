@@ -1,5 +1,0 @@
-env:
-  global: 
-    OTHER: true
-
-after_script: echo "Hello from other.yml"
