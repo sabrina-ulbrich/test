@@ -1,3 +1,5 @@
 language: shell
 os: linux
 import: ./one.yml
+script: 
+- echo "Hello from .travis.yml"
