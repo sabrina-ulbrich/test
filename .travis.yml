@@ -1,5 +1,8 @@
 language: shell
-os: linux
-import: ./one.yml
-script: 
-- echo "Hello from .travis.yml"
+env:
+  - FOO=one
+  - FOO=two
+jobs:
+  exclude:
+    - env: FOO=one
+      if: branch = master
