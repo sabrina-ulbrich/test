@@ -1,8 +1,4 @@
 language: shell
 env:
-  - FOO=one
-  - FOO=two
-jobs:
-  exclude:
-    - env: FOO=one
-      if: branch = master
+  - secure: "w4mnVsVIBq65FNJk153oFBLOVevEPfV96/IfIbKUwMBhKfwMPq5FDVCqLtyDY0xyeWC7dGRC/O5lOKZL7kHahoH3zQWkeilEsjqzgX0zfRAjyU5vlG+KKHY2SLR5KnMFsXRHP2Eqxu8wfUG8oX1yHcwdhfBDKg6L3lLOpexk9SxJyEyk/sIw/j9LslF1PMqDIL6Ndr0P/QhrPcwI9dV4Aii3g1vQzNemUn7Cu1BJdU1h++A+m5UGSwPwfXocM/ZF5V3ZJOImpxIYdRJNopZADsllSOP+PQ7jHZDDCfBbuZNGHgXtEhKorQxtNjbldTgY8EFxiBheTw9epn5Bezkj7MjJWGDezyTzka2qUow7DDq7YpbtcQiq4PY5XchMtCxiH+dAwlocVjFmHAzfuXjSe2Zo1pxfssN081j6ZZUamtBXSAzPCgpzV8OOKZwplNeYmk89//AN+NTS4n4V3AL+jdKcUSsDjNIhrXvAsJ1FzmeeTLoJLpzcpO/eC4Nb7sz/FYJS4CudM2djWpJFBtMBq1kpD94JTmYQfyutzRO7i/ZLeh6zC0KX+vjOZiyEsnY+9bSOpUK2ue/RTGYOnUns2p7LN4xE46RrX61975T/LVPzHQeS9bKktw+sUqH+YgjFF5DeXOSikYZZw1Y5YlGUTZ1/wU4is6ev2G1v3zjS8dU="
+script: echo $SECRET
