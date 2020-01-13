@@ -1,4 +1,4 @@
-language: shell
+language: shells
 stages:
 - one
 - two
