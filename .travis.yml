@@ -1,12 +1,13 @@
-language: shells
-stages:
-- one
-- two
-matrix:
+language: shell
+
+env:
+  - ONE=one
+  - TWO=two
+
+jobs:
   include:
-  - script: echo foo
-    stage: one
-  - script: echo bar
-  - script: echo baz
-    stage: two
-  - script: echo buz
+    - stage: one
+      env: ONE=one
+    - env: TWO=two
+
+script: true
