@@ -2,7 +2,8 @@ language: shell
 stages:
 - one
 - two
-jobs:
+matrix:
+  include:
   - script: echo foo
     stage: one
   - script: echo bar
