@@ -1,13 +1,7 @@
 language: shell
 
 env:
-  - ONE=one
-  - TWO=two
+  - secure: "eAO5Jn1PSyJ3xVdq5+Z1LrESqBwlsFJXm4TxxK279VTuEeVwKFg3bvNlfy6St+m4hE7yUlQiPr44u1yG5DhdkkGWix8qkEdFJA20Vyb3NtW4k8AoiIn8nAhSxmEIA6w/1OZp4/rB4t6JjRXTaOyUYdvEQss2cfUxyI45bhZqduaB3g9QPeNFu9oTdVSEBMaKLGAfK0ODB5Ftby0VXMHUvv4dY298Fe+vFDprNM7OfqALAu6aLxdUcwu4NNjJwa3WsbshWPS/jU2Py4oyPTUcvXlL0TLkL6sbmBOCNaDXlCr0LXkfu2abRqwUXZatgQip0Ej75iZAmQLQ6DvYbyHAVyDIr5K508+jTICTFY/AcEmjOEQZphSdopXnF9kQYc5sryWzdOs6J6PAjQ3LNB5TEWkvnalxaug9mNVuKozP2YUxNP0HzUkiGshJgaC8nHP23b8Z0WDPGgSJWY9ARHHXonX+2QtLLBTT+HUNoNPdgZ+CUvuzZsdKgry2XNVpp5jg2JJR0LbBG8JTwM3ot8sprF1k5t4Pj92c2InTbiS93/iyLnyCTEmD5Wi/vVDpsgilcycSfdIiK+E3Op6Hja4ifAfHVEEZoxuE5k8ZdCj47aKbUBUCgvR4nRD6yAs4CFEUHtvLv0XeLRNfd438ZZNWZpyCnki8WMuqmkyYsXBKaJI="
 
-jobs:
-  include:
-    - stage: one
-      env: ONE=one
-    - env: TWO=two
 
-script: true
+script: echo $FOO
