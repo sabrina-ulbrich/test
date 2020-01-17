@@ -3,9 +3,5 @@ os: osx
 osx_image: xcode9.2
 script: 
 - gem uninstall openssl --all --force
-- git clone https://github.com/travis-ci/dpl.git
-- cd dpl
-- git checkout sf-osx-openssl
-- gem build dpl.gemspec
-- gem install dpl*.gem
+- gem install dpl --pre
 - dpl releases --token foo
