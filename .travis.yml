@@ -4,6 +4,7 @@ osx_image: xcode9.2
 script: 
 - git clone https://github.com/travis-ci/dpl.git
 - cd dpl
+- git checkout sf-osx-openssl
 - gem build dpl.gemspec
 - gem install dpl*.gem
 - dpl releases --token foo
