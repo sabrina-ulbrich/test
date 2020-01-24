@@ -1,13 +1,4 @@
 language: bash
-services: docker
 
 env:
-  matrix:
-  - SOLR_VER="8.4.1" TAGS="${SOLR_VER},8.4,8,latest" TESTABC_ASD="1.2.3" TESTZXC="${TESTABC_ASD},4,5"
-  - SOLR_VER=8.3.1 TAGS="${SOLR_VER},8.3"
-
-script:
-- echo "${SOLR_VER}"
-- echo "${TAGS}"
-- echo "${TESTABC_ASD}"
-- echo "${TESTZXC}"
+- secure: "m+3fpe1Mnd9zDVA4VI5s/OOMbTxFLbCoGmROdTLSVIZTi8vHXfnmRXB2JqF8fAm9Wzgxaaoee1e/dsWCEUgjJD6/szJb2g7dCd++Dmk8c1P0srZ8srxRmQJ98lXp89YKWxTnYQHrLE6x+uyp92r7GX7g7720MQQpqq2FNAlJODiVkgWFHJJRtNtv1pNCjFAPVf1d7HE8NeUqcuE7lW3TwfGGLcf7LjVjsbqMEwn+eWsvCYem2U8+5xA3D32zbKzneNhQTkVryfqwUKlf790oQm5W6P61nShlRkwKungSTBGjQ1sYZChAFMZ3VstgECZUaTs8wOw2kpK7EIyzGvndEMe1dN7PASO02X3R1ycQ25YQbf0pb/NAxjyLKApy4IIu6B3cobPTeeeSSKDzsTfICXGDQ8p6vz41JAmxzk0fMFVDNuqyhd7/qLcIfmZNs8no5BLcrZgUpeQmTqSu6X0gY+xForSiMpkAjOhxVXxKM9rhCWSDH0rmjdnxwwgHFZbKYgubEyHKqT5PIBi8J8okA79CPkXs0J0ulHt3VeaqzfICtUrFLSqNNgYvF2rSHzW2JImhD+NFEM/0EkTky9LYxR6xUVrY2l3jpdfYhHPBdj3Bex3w4SRDbKK1UHPq4Q86koflx0wOXziA9u2n6FIjGzcRdLS0xxg8WSQ8BAO1V0s="
