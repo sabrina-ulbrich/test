@@ -1,7 +1,7 @@
 language: bash
 
 env:
-  matrix:
+  global:
   - SOLR_VER="8.4.1" TAGS="${SOLR_VER},8.4,8,latest" TESTABC_ASD="1.2.3" TESTZXC="${TESTABC_ASD},4,5"
 
 script: true
