@@ -1,5 +1,2 @@
-os:
-- linux
-- osx
-
-script: true
+language: shell
+script: 'date -u +"%Y-%m-%d %H:%M:%S -0000" --date "next Year"'
