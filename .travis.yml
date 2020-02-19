@@ -1,3 +1,14 @@
 language: shell
-script: 'date -u +"%Y-%m-%d %H:%M:%S -0000" --date "next Year"'
-import: one.yml
+jobs:
+  allow_failures:
+    - name: Allow Failures
+    - name: Only Feature Branch Allow Failures
+      if: branch != master
+  include:
+    - stage: Test (Allow Failures)
+      name: Allow Failures
+      script: exit 1
+    - name: Only Feature Branch Allow Failures
+    - stage: Deploy
+      name: Deploy
+      script: echo "DEPLOY FOR $TRAVIS_BRANCH"
