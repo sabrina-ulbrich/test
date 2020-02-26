@@ -1,16 +1,5 @@
 dist: xenial
 
-addons:
-  postgresql: 11
-  apt:
-    update: true
-    packages:
-      - postgresql-11
-      - postgresql-client-11
-
-services:
-  - postgresql
-
 before_install:
   - sudo apt-get install -yq --no-install-suggests --no-install-recommends postgresql-common
   - sudo service postgresql stop
