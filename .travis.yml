@@ -12,6 +12,8 @@ services:
   - postgresql
 
 before_script:
+  - sudo sed -e 's/^port.*/port = 5432/' /etc/postgresql/11/main/postgresql.conf > postgresql.conf
+  - sudo service postgresql restart 11
   - sudo cat /var/log/postgresql/postgresql-11-main.log
   - psql --version
   - psql -c 'CREATE DATABASE travis_test;' -U postgres
