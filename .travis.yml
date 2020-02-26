@@ -12,7 +12,7 @@ services:
   - postgresql
 
 before_script:
-  - cat /var/log/postgresql/postgresql-11-main.log
+  - sudo cat /var/log/postgresql/postgresql-11-main.log
   - psql --version
   - psql -c 'CREATE DATABASE travis_test;' -U postgres
   - psql -c 'CREATE ROLE travis SUPERUSER LOGIN CREATEDB;' -U postgres
