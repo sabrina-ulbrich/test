@@ -2,6 +2,9 @@ dist: xenial
 
 addons:
   postgres: 11
+  
+services:
+  - postgres
 
 before_install:
   # - sudo apt-get install -yq --no-install-suggests --no-install-recommends postgresql-common
