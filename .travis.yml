@@ -1,15 +1,18 @@
-language: shell
-jobs:
-  allow_failures:
-    - name: Allow Failures
-    - name: Only Feature Branch Allow Failures
-      if: branch != master
-  include:
-    - stage: Test (Allow Failures)
-      name: Allow Failures
-      script: exit 1
-    - name: Only Feature Branch Allow Failures
-      script: exit 1
-    - stage: Deploy
-      name: Deploy
-      script: echo "DEPLOY FOR $TRAVIS_BRANCH"
+dist: xenial
+
+addons:
+  postgresql: 11
+  apt:
+    update: true
+    packages:
+      - postgresql-11
+      - postgresql-client-11
+
+services:
+  - postgresql
+
+before_script:
+  - psql --version
+  - psql -c 'CREATE DATABASE travis_test;' -U postgres
+  - psql -c 'CREATE ROLE travis SUPERUSER LOGIN CREATEDB;' -U postgres
+  - curl -fs https://raw.githubusercontent.com/travis-ci/travis-migrations/master/db/main/structure.sql | psql travis_test
