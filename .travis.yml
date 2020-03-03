@@ -1,9 +1,17 @@
-language: shell
-import: one.yml
-script: true
-jobs:
-  include:
-  - name: one
-    stage: one
-  - name: two
-    stage: two
+{
+   "language" : "perl",
+   "perl" : [
+      "5.26",
+      "5.14"
+   ],
+   "script" : true,
+   "install" : true,
+   "jobs" : {
+      "include" : [
+         {
+            "stage" : "merge",
+            "script" : echo "job.include"
+         }
+      ]
+   }
+}
