@@ -1,15 +1,9 @@
+language: shell
 env:
-  - ONE=one TWO=two
-  - THREE=three
-
-stages:
-  - test
-  - name: two
-    if: env(THREE) = three
-
+  global:
+    - REPO_SLUG="svenfuchs/test"
 jobs:
   include:
-    - stage: two
-      script: true
-
-script: true
+    - script: echo 1
+    - script: echo 2
+      if: repo = env(REPO_SLUG)
