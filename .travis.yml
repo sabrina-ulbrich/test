@@ -1,7 +1,13 @@
-version: ~> 1.0
-language: node_js
-os:
- - linux
-import:
- - ljharb/travis-ci:node/all.yml
- - ljharb/travis-ci:node/pretest.yml
+env:
+  - ARMADILLO=latest ONE=perform
+  - ARMADILLO=minimum
+
+stages:
+  - test
+  - name: one
+    if: type = pull_request AND env(ONE) = "perform"
+
+jobs:
+  include:
+    - stage: one
+      script: true
