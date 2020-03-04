@@ -1,13 +1,15 @@
 env:
-  - ARMADILLO=latest ONE=perform
-  - ARMADILLO=minimum
+  - ONE=one TWO=two
+  - THREE=three
 
 stages:
   - test
-  - name: one
-    if: type = pull_request AND env(ONE) = "perform"
+  - name: two
+    if: env(TWO) = two
 
 jobs:
   include:
-    - stage: one
+    - stage: two
       script: true
+
+script: true
