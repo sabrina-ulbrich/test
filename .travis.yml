@@ -5,7 +5,7 @@ env:
 stages:
   - test
   - name: two
-    if: env(TWO) = two
+    if: env(THREE) = three
 
 jobs:
   include:
