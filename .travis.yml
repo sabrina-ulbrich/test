@@ -42,9 +42,6 @@ jobs:
       os: *reference_os
       env:
         - *reference_jdk
-      script:
-        - cd "$TRAVIS_BUILD_DIR"/protelis
-        - ./gradlew clean check fatJar --scan --parallel
     - stage: deploy
       name: "Reports and deployment"
       if: repo = env(OFFICIAL_REPO_SLUG) AND type != pull_request
