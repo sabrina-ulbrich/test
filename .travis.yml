@@ -1,52 +1,14 @@
-_reference_jdk: &reference_jdk
-  'JDK="adopt@1.8"'
+language: node_js
+node_js:
+  - 10
+  - 12
 
-_reference_os: &reference_os
-  'linux'
-
-_official_repo: &official_repo
-  'Protelis/Protelis'
-
-language: bash
-os:
-  - osx
-  - windows
-  - *reference_os
-dist: xenial
-addons:
-  apt:
-    packages:
-    - graphviz
-stages:
-  - check
-  - test
-  - deploy
-env:
-  global:
-    - OFFICIAL_REPO_SLUG="svenfuchs/test"
-  matrix:
-    - *reference_jdk
-    - JDK="adopt-openj9@1.8"
-    - JDK="adopt@1.11"
-    - JDK="adopt-openj9@1.11"
-    - JDK="adopt@1.12"
-    - JDK="adopt-openj9@1.12"
 jobs:
-  exclude:
-    - os: *reference_os
-      env: *reference_jdk
-      stage: test
-  include:
-    - stage: check
-      name: "Deep check on reference OS and JDK"
-      os: *reference_os
-      env:
-        - *reference_jdk
-    - stage: deploy
-      name: "Reports and deployment"
-      if: repo = env(OFFICIAL_REPO_SLUG) AND type != pull_request
-      os: *reference_os
-      env:
-        - PUBLISH="true"
-        - *reference_jdk
+  - include:
+    - stage: update mirror
+      node_js: 12
+      if: branch = master AND type = cron AND os = linux
+      script: ./scripts/ci-cron
+      
+install: true
 script: true
