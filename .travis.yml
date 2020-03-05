@@ -1,15 +1,12 @@
 language: shell
 
-env:
-  global:
-    - JOBS=1
-
 jobs:
   allow_failures:
-    - env: ONE=one
+    - name: two
 
   include:
-    - env: ONE=one
-    - env: TWO=two
-    - env: THREE=three
+    - name: one
+      env: ONE=one
+    - name: two
+      env: TWO=two
 
