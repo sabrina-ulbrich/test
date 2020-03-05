@@ -19,6 +19,7 @@ matrix:
         - DO_CHECK_SETUP_SCRIPTS="yes"
         - DO_DISTCHECK="yes"
   include:
+    - name: one
     - os: linux
       compiler: gcc
       env:
@@ -28,3 +29,4 @@ matrix:
         - ARGS="--enable-rust-strict"
         - DO_CHECK_SETUP_SCRIPTS="yes"
         - DO_DISTCHECK="yes"
+    
