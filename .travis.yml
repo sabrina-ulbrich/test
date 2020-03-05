@@ -1,6 +1,15 @@
 language: shell
+
+env:
+  global:
+    - JOBS=1
+
 jobs:
+  allow_failures:
+    - env: ONE=one
+
   include:
-    - env:
-        - APP_NAME="changED"
-      script: echo $APP_NAME
+    - env: ONE=one
+    - env: TWO=two
+    - env: THREE=three
+
