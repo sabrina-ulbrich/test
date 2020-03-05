@@ -1,19 +1,11 @@
-env:
-  global:
-    - WILLIAM=1234
-
 jobs:
   include:
-    # Fake job for debugging.
     - if: env(WILLIAM) IS present
       name: This works
-      script:
-        - env
+      script: true
 
-    # Fake job for debugging.
     - if: env(WILLIAM) IS present
       name: This does not work
       env:
         - ANYTHING=HERE
-      script:
-        - env
+      script: true
