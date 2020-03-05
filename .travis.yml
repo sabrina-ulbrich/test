@@ -1,11 +1,6 @@
+language: shell
 jobs:
   include:
-    - if: env(WILLIAM) IS present
-      name: This works
-      script: true
-
-    - if: env(WILLIAM) IS present
-      name: This does not work
-      env:
-        - ANYTHING=HERE
-      script: true
+    - env:
+        - APP_NAME="changED"
+      script: echo $APP_NAME
