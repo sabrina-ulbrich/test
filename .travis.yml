@@ -1,3 +1,7 @@
+env:
+  global:
+    - WILLIAM=1234
+
 jobs:
   include:
     # Fake job for debugging.
