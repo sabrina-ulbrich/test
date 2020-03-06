@@ -1,3 +1,5 @@
+language: shell
+
 jobs:
   include:
   - name: one
