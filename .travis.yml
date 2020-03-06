@@ -5,4 +5,3 @@ jobs:
   - name: one
   - name: two
     if: type = push AND env(SONAR_TOKEN) IS present
-
