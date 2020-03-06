@@ -9,4 +9,3 @@ jobs:
     - name: one
     - name: two
       if: type = push AND env(SETTING) is present
-      
