@@ -4,4 +4,4 @@ jobs:
   include:
   - name: one
   - name: two
-    if: type = push AND env(SONAR_TOKEN) IS present
+    if: type = push AND env(SETTING) IS present
