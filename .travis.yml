@@ -3,16 +3,19 @@ language: shell
 env:
   global:
     - GLOBAL=true
+  jobs:
+    - ONE=one
+    - TWO=two
 
 stages:
-  - name: one
-    if: 'env(ONE) = one'
   - name: two
-    if: 'NOT env(ONE) = one'
+    if: 'env(TWO) = two'
+  - name: three
+    if: 'NOT env(TWO) = two'
 
 jobs:
   include:
-    - stage: one
-      name: one
     - stage: two
       name: two
+    - stage: three
+      name: three
