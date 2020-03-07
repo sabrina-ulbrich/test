@@ -2,10 +2,17 @@ language: shell
 
 env:
   global:
-    - X=Y
+    - GLOBAL=true
+
+stages:
+  - name: one
+    if: 'env(ONE) = one'
+  - name: two
+    if: 'NOT env(ONE) = one'
 
 jobs:
   include:
-    - name: one
-    - name: two
-      if: type = push AND env(SETTING) is present
+    - stage: one
+      name: one
+    - stage: two
+      name: two
