@@ -1,21 +1,13 @@
 language: shell
 
-env:
-  global:
-    - GLOBAL=true
-  jobs:
-    - ONE=one
-    - TWO=two
-
-stages:
-  - name: two
-    if: 'env(TWO) = two'
-  - name: three
-    if: 'NOT env(TWO) = two'
+jobs:
+  include:
+    - name: one
 
 jobs:
   include:
-    - stage: two
-      name: two
-    - stage: three
-      name: three
+    - name: two
+
+matrix:
+  include:
+    - name: three
