@@ -1,13 +1,2 @@
 language: shell
-
-jobs:
-  include:
-    - name: one
-
-jobs:
-  include:
-    - name: two
-
-matrix:
-  include:
-    - name: three
+script: env
