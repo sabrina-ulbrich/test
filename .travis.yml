@@ -1,10 +1,72 @@
 language: shell
+  
+script: echo "This is ${TRAVIS_JOB_NAME}"
+
 env:
   global:
-    - OFFICIAL_REPO_SLUG="svenfuchs/test"
+    - FOO=BanzaiMan/travis_production_test
+    
 jobs:
   include:
     - name: one
-    - stage: deploy
-      name: two
-      if:  type != pull_request AND repo = env(OFFICIAL_REPO_SLUG)
+    - name: two
+      if: type = push AND env(FOO) = BanzaiMan/travis_production_test
+    
+
+
+# env:
+#  global:
+#    - secure: "Ofh4egBqeXc7IgOqolyUvfRMXJ8lGzY4amNtI04xayGiFss/3B5huPHGB+0WgUAV3ZmpU3zHIOG72WsgRauYvQGFygsDxmO+zpWx2OR69zTuXbU8e0V+/Qizn8rSRLNeFiOo6QW3yhnoLV4G1bgb0I5BnflJdVpCnrrqjk5pzh8="
+# gemfile: our_gemfile
+
+# script: skip
+
+# jobs:
+#   include:
+#     - language: c
+#       os: linux
+#       dist: trusty
+#       env: JOB='Linux' GENERATOR='Unix Makefiles' CMAKE_FLAGS='-DPLATFORM_BUILD_SHARED=TRUE -DPLATFORM_ENABLE_DEBUG=FALSE'
+    # - sudo: false
+    #   dist: precise
+    #   env: DIST=precise STACK=EC2
+    # - sudo: required
+    #   dist: precise
+    #   env: DIST=precise STACK=GCE
+    # - stage: second
+    #   sudo: false
+    #   dist: trusty
+    #   env: DIST=trusty STACK=EC2
+    # - sudo: required
+    #   dist: trusty
+    #   env: DIST=trusty STACK=GCE
+    # - sudo: false
+    #   dist: trusty
+    #   group: edge
+    #   env: DIST=trusty STACK=EC2 GROUP=edge
+    # - sudo: required
+    #   dist: trusty
+    #   group: edge
+    #   env: DIST=trusty STACK=GCE GROUP=edge
+#     - os: osx
+# deploy:
+#   on:
+#     all_branches: true
+#   provider: surge
+# branches:
+#   only: ruby
+notifications:
+  email: false
+  slack:
+    - rooms:
+      - secure: "LV6Wmu98nfLN0wOJrSY2ftXVnug7SQERmZ69vHARTuJ5TEIcXnC8n5/ci705nkXQnSxcidDjJuDWfL+FSus6Nb9ZjDU+yssicAHmfB4vcK7gVx8O7/kKbTpXLmafKKM0oVz5drZIJMLWYaSt0HyJcfm9t71m5ZPgPOjXUxoHW4Q="
+      template:
+        - "SUCCESS: Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message} foobar"
+      on_success: always
+      on_failure: never
+    - rooms:
+      - secure: "LV6Wmu98nfLN0wOJrSY2ftXVnug7SQERmZ69vHARTuJ5TEIcXnC8n5/ci705nkXQnSxcidDjJuDWfL+FSus6Nb9ZjDU+yssicAHmfB4vcK7gVx8O7/kKbTpXLmafKKM0oVz5drZIJMLWYaSt0HyJcfm9t71m5ZPgPOjXUxoHW4Q="
+      template:
+        - "FAILURE: Build <%{build_url}|#%{build_number}> (<%{compare_url}|%{commit}>) of %{repository}@%{branch} by %{author} %{result} in %{duration} (elapsed time: %{elapsed_time}) subject: %{commit_subject} message: %{commit_message} foobar"
+      on_success: never
+      on_failure: always
