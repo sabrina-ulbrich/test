@@ -1,14 +1,10 @@
 language: shell
-  
-script: echo "This is ${TRAVIS_JOB_NAME}"
-
 env:
   global:
-    - FOO=BanzaiMan/travis_production_test
-    
+    - OFFICIAL_REPO_SLUG="DanySK/conrec"
 jobs:
   include:
     - name: one
-    - name: two
-      if: type = push AND env(FOO) = BanzaiMan/travis_production_test
-    
+    - stage: deploy
+      name: two
+      if:  type != pull_request AND repo = env(OFFICIAL_REPO_SLUG)
