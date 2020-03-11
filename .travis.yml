@@ -1,2 +1,14 @@
 language: shell
-script: env
+  
+script: echo "This is ${TRAVIS_JOB_NAME}"
+
+env:
+  global:
+    - FOO=BanzaiMan/travis_production_test
+    
+jobs:
+  include:
+    - name: one
+    - name: two
+      if: type = push AND env(FOO) = BanzaiMan/travis_production_test
+    
