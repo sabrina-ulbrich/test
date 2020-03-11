@@ -1,7 +1,7 @@
 language: shell
 env:
   global:
-    - OFFICIAL_REPO_SLUG="DanySK/conrec"
+    - OFFICIAL_REPO_SLUG="svenfuchs/test"
 jobs:
   include:
     - name: one
