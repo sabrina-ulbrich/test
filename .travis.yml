@@ -1,14 +1,12 @@
-language: shell
-
-env:
-  global:
-  - PATTERN="^(master|staging.*)$"
-
-stages:
-- name: build
-  if: branch ~= env(PATTERN)
-jobs:
-  include:
-    - name: one
-    - name: two
-      stage: build
+version: ~> 1.0
+language: node_js
+os:
+ - linux
+import:
+ - ljharb/travis-ci:node/all.yml
+ - ljharb/travis-ci:node/pretest.yml
+ - ljharb/travis-ci:node/posttest.yml
+ - ljharb/travis-ci:node/coverage.yml
+matrix:
+  allow_failures:
+    - env: COVERAGE=true
