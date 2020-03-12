@@ -1,6 +1,11 @@
-language: cpp
-os: linux
-dist: xenial
-arch: ppc64le
-virt: vm
-script: true
+language: shell
+
+jobs:
+  include:
+  - os: linux
+    dist: xenial
+    arch: ppc64le
+    virt: vm
+  - os: linux-ppc64le
+    dist: xenial
+    
