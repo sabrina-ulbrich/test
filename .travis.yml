@@ -2,10 +2,9 @@ language: shell
 
 jobs:
   include:
-  - os: linux
-    dist: xenial
-    arch: ppc64le
-    virt: vm
-  - os: linux-ppc64le
-    dist: xenial
-    
+  - env: ONE=one
+  - env: TWO=two
+  - env: THREE=three
+  allow_failures:
+  - env: ONE=one
+  - env: TWO=two
