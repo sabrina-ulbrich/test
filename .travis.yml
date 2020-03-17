@@ -1,10 +1,26 @@
 language: shell
 
-jobs:
+env:
+  global:
+    - CI_TIME=false
+  matrix:
+    - BUILD_TYPE=default
+    - BUILD_TYPE=default-Werror
+
+matrix:
   include:
-  - env: ONE=one
-  - env: TWO=two
-  - env: THREE=three
+  - env: BUILD_TYPE=default-with-docs
+  - env: BUILD_TYPE=valgrind
+  - env: BUILD_TYPE=default ADDRESS_SANITIZER=enabled
+  - env: BUILD_TYPE=default-Werror MATRIX_EVAL="CC=gcc-4.9 && CXX=g++-4.9 && export CC CXX"
+  - env: BUILD_TYPE=default-Werror MATRIX_EVAL="CC=gcc-5 && CXX=g++-5 && export CC CXX"
+  - env: BUILD_TYPE=default-Werror MATRIX_EVAL="CC=gcc-6 && CXX=g++-6 && export CC CXX"
+  - env: BUILD_TYPE=default-Werror MATRIX_EVAL="CC=gcc-7 && CXX=g++-7 && export CC CXX"
+  - env: BUILD_TYPE=clang-format-check CLANG_FORMAT=clang-format-5.0
+  
   allow_failures:
-  - env: ONE=one
-  - env: TWO=two
+  - env: BUILD_TYPE=default-Werror MATRIX_EVAL="CC=gcc-4.9 && CXX=g++-4.9 && export CC CXX"
+  - env: BUILD_TYPE=default-Werror MATRIX_EVAL="CC=gcc-5 && CXX=g++-5 && export CC CXX"
+  - env: BUILD_TYPE=default-Werror MATRIX_EVAL="CC=gcc-6 && CXX=g++-6 && export CC CXX"
+  - env: BUILD_TYPE=default-Werror MATRIX_EVAL="CC=gcc-7 && CXX=g++-7 && export CC CXX"
+  - env: BUILD_TYPE=clang-format-check CLANG_FORMAT=clang-format-5.0
