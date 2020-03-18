@@ -1,5 +1,6 @@
 language: shell
 jobs:
   include: 
-    - name: wat
+    - name: one
+    - name: two
       if: $TRAVIS_EVENT_TYPE='cron'
