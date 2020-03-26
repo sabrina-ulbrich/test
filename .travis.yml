@@ -3,8 +3,8 @@ language: shell
 before_install:
 - |-
   cat > foo << EOF
-    #/bin/bash
-    echo bar
+  #/bin/bash
+  echo bar
   EOF
 - chmod +x foo
 
