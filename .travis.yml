@@ -1,7 +1,7 @@
 language: shell
 
 before_install:
-- |-
+- |
   cat << EOF | sed 's/  //' > foo
   #/bin/bash
   echo bar
