@@ -1,8 +1,1 @@
 language: shell
-jobs:
-  include: 
-    - name: one
-    - name: two
-      if: $TRAVIS_EVENT_TYPE='cron'
-  allow_failures:
-    - name: one
