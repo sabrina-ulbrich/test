@@ -2,11 +2,12 @@ language: shell
 
 before_install:
 - |
-  cat << EOF | sed 's/  //' > foo
+  cat << EOF > foo
   #/bin/bash
   echo bar
   EOF
 - chmod +x foo
 
 script:
+- cat ./foo
 - ./foo
