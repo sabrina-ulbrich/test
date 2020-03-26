@@ -1,7 +1,7 @@
 language: shell
 
 before_install:
-- 'function write() { name=$1; content=$2; echo "$1" | sed "s/  //" > $name; chmod +x $name; }'
+- 'function write() { echo "$2" | sed "s/  //" > $1; chmod +x $name; }'
 - |-
   write foo << EOF
   #/bin/bash
