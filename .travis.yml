@@ -5,7 +5,6 @@ before_install:
   cat << EOF | sed 's/  //' > foo
   #/bin/bash
   echo bar
-  EOF
 - chmod +x foo
 
 script:
