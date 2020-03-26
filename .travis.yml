@@ -1,1 +1,2 @@
 language: shell
+if: branch = master OR tag IS present OR type = pull_request
