@@ -1,19 +1,12 @@
 language: shell
 
 before_install:
-- 'function write() { echo "$2" | sed "s/  //" > $1; chmod +x $name; }'
 - |-
-  write foo << EOF
-  #/bin/bash
-  echo foo
-- |-
-  write bar << EOF
+  cat << EOF | sed 's/  //' > foo
   #/bin/bash
   echo bar
-
+- chmod +x foo
 
 script:
 - cat ./foo
-- cat ./bar
 - ./foo
-- ./bar
