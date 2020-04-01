@@ -1,12 +1,2 @@
 language: shell
-
-before_install:
-- |-
-  cat << EOF | sed 's/  //' > foo
-  #/bin/bash
-  echo bar
-- chmod +x foo
-
-script:
-- cat ./foo
-- ./foo
+import: svenfuchs/test-3:one.yml
