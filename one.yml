@@ -1,4 +1,8 @@
 import: ./two.yml
 
+env:
+  global: 
+    - VAR=one
+    
 script: 
 - echo "Hello from one.yml"
