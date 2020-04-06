@@ -1,2 +1,4 @@
 language: shell
-import: svenfuchs/test-3:one.yml
+import: one.yml
+script:
+- echo "hello from .travis.yml"
