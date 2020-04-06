@@ -1,4 +1,9 @@
 language: shell
 import: one.yml
+
+env:
+  global: 
+    - VAR=travis_yml
+    
 script:
 - echo "hello from .travis.yml"
