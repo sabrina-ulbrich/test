@@ -1,5 +1,1 @@
 language: shell
-deploy:
-  - provider: script
-    edge: true
-    script: false
