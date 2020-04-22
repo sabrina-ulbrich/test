@@ -1,2 +1,2 @@
 language: shell
-script: travis_wait 10 ruby wait.rb
+script: travis_wait 1 echo 1
