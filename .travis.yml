@@ -1,2 +1,0 @@
-language: shell
-script: travis_wait 1 echo 1
