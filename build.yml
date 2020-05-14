@@ -1,5 +1,4 @@
 import:
-- source: install.yml
-  mode: deep_merge_append
+- install.yml
 before_install:
 - echo "build.yml"
