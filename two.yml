@@ -1,6 +1,0 @@
-env:
-  global: 
-    - VAR=two
-    
-script: 
-- echo "Hello from two.yml"
