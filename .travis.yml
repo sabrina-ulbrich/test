@@ -1,3 +1,6 @@
 language: shell
+import:
+- build.yml
+- deploy.yml
 before_install:
 - echo ".travis.yml"
