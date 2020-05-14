@@ -1,6 +1,8 @@
 language: shell
 import:
-- build.yml
-- deploy.yml
+- source: build.yml
+  mode: deep_merge_prepend
+- source: deploy.yml
+  mode: deep_merge_prepend
 before_install:
 - echo ".travis.yml"
