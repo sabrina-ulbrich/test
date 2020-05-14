@@ -1,5 +1,5 @@
 import:
 - source: install.yml
-  mode: deep_merge_prepend
+  mode: deep_merge_append
 before_install:
 - echo "deploy.yml"
